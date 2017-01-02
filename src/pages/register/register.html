@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+
+  <ion-item>
+    <ion-label stacked>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="userDetails.userName"></ion-input>
+  </ion-item>
+
+ <ion-item>
+    <ion-label stacked>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="userDetails.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="userDetails.password"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-label stacked>Retype Password</ion-label>
+    <ion-input type="password" [(ngModel)]="userDetails.confirmPassword"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<ion-list radio-group  [(ngModel)]="userDetails.gender">
+  <ion-item>
+    <ion-label>Male</ion-label>
+    <ion-radio checked="true" [value]="1" ></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Female</ion-label>
+    <ion-radio [value]="0" ></ion-radio>
+  </ion-item> 
+</ion-list>
+
+<div padding>
+   <button ion-button block (click)="register()">Register</button>  
+</div>
+
+ 
+
+</ion-content>

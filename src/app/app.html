@@ -1,0 +1,23 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <content *ngFor="let p of pages" (click)="openPage(p)">
+        <button ion-item  *ngIf="p.isVisible==true">
+          <span style="color:#000;">
+            {{p.title}}
+          </span>        
+         </button>
+      </content> 
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

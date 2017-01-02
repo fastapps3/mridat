@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Question Category</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<p>
+   List Of Question Category
+</p>
+
+<div class="row">
+  
+  <div class="col-sm-6 col-xs-6" *ngFor="let faculty of faculty_details">
+      <div class="col-sm-12 col-xs-12 question-box">
+        <p style="margin-top:15px;text-align:center;">{{faculty.facultyName}}</p>
+        <p>{{faculty.description}}</p>
+      </div>
+  </div>
+
+   
+</div>
+</ion-content>

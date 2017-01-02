@@ -1,0 +1,52 @@
+
+<ion-header>
+  <ion-navbar>    
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="userDetails.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="userDetails.password"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+   <button ion-button block (click)="signIn()">Sign In</button>  
+    <button ion-button block (click)="signInWithGoogle()">Gmail Sign In</button>  
+</div>
+
+<div>
+  <button ion-button clear (click)="moveToRegisterPage()">Register</button>
+   <button ion-button clear (click)="writeDataToFirebase()">Create Questions</button>
+</div>
+
+
+<!-- <div padding>
+   <button ion-button small>
+     <i class="fa fa-facebook-official" aria-hidden="true"></i>
+     Fb Login</button> 
+    <button ion-button small (click)="login()">Gmail</button>  
+
+    <p>{{message}}</p>
+</div>
+<button type="button" class="btn btn-info" (click)="WriteDataToFirebase()">Push Model</button>
+<ul>
+  <li class="text" *ngFor="let item of messages | async">
+    {{item.username}}
+  </li>
+</ul>-->
+ 
+  
+
+</ion-content>
